@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.3 on win32)" generated="2025-11-03T16:55:00.567456" rpa="false" schemaversion="5">
+<suite id="s1" name="Order" source="c:\Users\User\Desktop\robot_test\tests\ui\order.robot">
+<kw name="Open Browser To Base" owner="login_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:00.727100" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-03T16:55:00.726100" elapsed="3.473191"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-03T16:55:04.199291" elapsed="1.617429"/>
+</kw>
+<status status="PASS" start="2025-11-03T16:55:00.726100" elapsed="5.090620"/>
+</kw>
+<test id="s1-t1" name="Order 1 item" line="10">
+<kw name="Login With Valid Credential" owner="login_keywords">
+<kw name="Get Env" owner="load_env">
+<msg time="2025-11-03T16:55:05.823720" level="INFO">${username} = standard_user</msg>
+<var>${username}</var>
+<arg>USERNAME</arg>
+<doc>อ่านค่าตัวแปรแวดล้อมตามชื่อที่ขอ</doc>
+<status status="PASS" start="2025-11-03T16:55:05.820719" elapsed="0.003001"/>
+</kw>
+<kw name="Get Env" owner="load_env">
+<msg time="2025-11-03T16:55:05.829757" level="INFO">${password} = secret_sauce</msg>
+<var>${password}</var>
+<arg>PASSWORD</arg>
+<doc>อ่านค่าตัวแปรแวดล้อมตามชื่อที่ขอ</doc>
+<status status="PASS" start="2025-11-03T16:55:05.824719" elapsed="0.005038"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:05.833718" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T16:55:05.830717" elapsed="0.229734"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.061492" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.061492" elapsed="0.085208"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.147768" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.146700" elapsed="0.098077"/>
+</kw>
+<status status="PASS" start="2025-11-03T16:55:05.820719" elapsed="0.425058"/>
+</kw>
+<kw name="Add 1 item sauce labs backpack" owner="card_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.249288" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.249288" elapsed="0.095962"/>
+</kw>
+<status status="PASS" start="2025-11-03T16:55:06.249288" elapsed="0.095962"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.368977" level="INFO">Current page contains text 'Remove'.</msg>
+<arg>Remove</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.345250" elapsed="0.024687"/>
+</kw>
+<kw name="Checkout item sauce labs backpack" owner="card_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.374980" level="INFO">Clicking element 'xpath://*[@id="shopping_cart_container"]/a'.</msg>
+<arg>xpath://*[@id="shopping_cart_container"]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.374980" elapsed="0.095392"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.480371" level="INFO">Current page contains text 'Sauce Labs Backpack'.</msg>
+<arg>Sauce Labs Backpack</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.470372" elapsed="0.009999"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.481374" level="INFO">Clicking button 'id:checkout'.</msg>
+<arg>id:checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.480371" elapsed="0.046633"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.540242" level="INFO">Current page contains text 'Checkout: Your Information'.</msg>
+<arg>Checkout: Your Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.527004" elapsed="0.013238"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.541280" level="INFO">Typing text 'Supavida' into text field 'id:first-name'.</msg>
+<arg>id:first-name</arg>
+<arg>Supavida</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.540242" elapsed="0.082134"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.623564" level="INFO">Typing text 'Itthirak' into text field 'id:last-name'.</msg>
+<arg>id:last-name</arg>
+<arg>Itthirak</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.622376" elapsed="0.153188"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.776563" level="INFO">Typing text '12120' into text field 'id:postal-code'.</msg>
+<arg>id:postal-code</arg>
+<arg>12120</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.776563" elapsed="0.120479"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.897042" level="INFO">Clicking button 'id:continue'.</msg>
+<arg>id:continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.897042" elapsed="0.062436"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.981688" level="INFO">Current page contains text 'Checkout: Overview'.</msg>
+<arg>Checkout: Overview</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.960438" elapsed="0.021250"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:06.983303" level="INFO">Clicking button 'id:finish'.</msg>
+<arg>id:finish</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T16:55:06.983303" elapsed="0.062508"/>
+</kw>
+<status status="PASS" start="2025-11-03T16:55:06.370978" elapsed="0.674833"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-03T16:55:07.059201" level="INFO">Current page contains text 'Thank you for your order!'.</msg>
+<arg>Thank you for your order!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-03T16:55:07.046812" elapsed="0.012389"/>
+</kw>
+<tag>login</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-11-03T16:55:05.816720" elapsed="1.242481"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-03T16:55:07.062244" elapsed="2.129626"/>
+</kw>
+<status status="PASS" start="2025-11-03T16:55:00.570455" elapsed="8.621415"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+<stat pass="1" fail="0" skip="0">ui</stat>
+</tag>
+<suite>
+<stat name="Order" id="s1" pass="1" fail="0" skip="0">Order</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-03T16:55:00.723101" level="ERROR">Error in file 'c:\Users\User\Desktop\robot_test\tests\ui\order.robot' on line 4: Processing variable file '../../resources/variables/common.robot' failed: Importing variable file '../../resources/variables/common.robot' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\User\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_debug_adapter
+  C:\Users\User\Desktop\robot_test
+  c:\Users\User\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src
+  c:\Users\User\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored
+  C:\Users\User\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\User\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\User\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\User\AppData\Local\Programs\Python\Python312
+  c:\Users\User\Desktop\robot_test\.venv
+  c:\Users\User\Desktop\robot_test\.venv\Lib\site-packages</msg>
+</errors>
+</robot>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.3 on win32)" generated="2025-11-01T12:31:58.790707" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\User\Desktop\robot_test\tests\ui\login.robot">
+<kw name="Open Browser To Base" type="SETUP">
+<msg time="2025-11-01T12:31:58.836088" level="FAIL">No keyword with name 'Open Browser To Base' found.</msg>
+<status status="FAIL" start="2025-11-01T12:31:58.835088" elapsed="0.001000">No keyword with name 'Open Browser To Base' found.</status>
+</kw>
+<test id="s1-t1" name="Login Successfully" line="9">
+<tag>login</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="FAIL" start="2025-11-01T12:31:58.836088" elapsed="0.000000">Parent suite setup failed:
+No keyword with name 'Open Browser To Base' found.</status>
+</test>
+<test id="s1-t2" name="Login With Invalid Credential" line="14">
+<tag>login</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="FAIL" start="2025-11-01T12:31:58.837089" elapsed="0.000000">Parent suite setup failed:
+No keyword with name 'Open Browser To Base' found.</status>
+</test>
+<kw name="Close All Browsers" type="TEARDOWN">
+<msg time="2025-11-01T12:31:58.838117" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" start="2025-11-01T12:31:58.838117" elapsed="0.000000">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<status status="FAIL" start="2025-11-01T12:31:58.791713" elapsed="0.046404">Suite setup failed:
+No keyword with name 'Open Browser To Base' found.
+
+Also suite teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">login</stat>
+<stat pass="0" fail="2" skip="0">smoke</stat>
+<stat pass="0" fail="2" skip="0">ui</stat>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="0" fail="2" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-01T12:31:58.833315" level="ERROR">Error in file 'C:\Users\User\Desktop\robot_test\tests\ui\login.robot' on line 2: Resource file '..\..\resources\keywords\auth_flow.resource' does not exist.</msg>
+<msg time="2025-11-01T12:31:58.834026" level="ERROR">Error in file 'C:\Users\User\Desktop\robot_test\tests\ui\login.robot' on line 3: Variable file '..\..\resources\variables\common.yaml' does not exist.</msg>
+</errors>
+</robot>
